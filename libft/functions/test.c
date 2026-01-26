@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 15:19:55 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/25 15:19:56 by embostan         ###   ########.fr       */
+/*   Created: 2026/01/25 17:48:09 by embostan          #+#    #+#             */
+/*   Updated: 2026/01/25 17:48:29 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void    *ft_memccpy(void *dest, void *src, void *nc, int n)
+int	main(void)
 {
-    unsigned char *d = (unsigned char *)dest;
-    unsigned char *s = (unsigned char *)src;
-    unsigned char *c = (unsigned char *)nc;
-    int i;
-
-    i = 0;
-    while (i < n)
-    {
-        if (s[i] == *c)
-        {
-            d[i] = s[i];
-            return (&d[i + 1]);
-        }
-        d[i] = s[i];
-        i++;
-    }
-    return NULL;
+	return (0);
 }
