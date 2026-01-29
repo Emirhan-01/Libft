@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:37:48 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 14:15:46 by embostan         ###   ########.fr       */
+/*   Created: 2026/01/28 13:41:40 by embostan          #+#    #+#             */
+/*   Updated: 2026/01/28 20:13:41 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_tolower(int c)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-
-	if (!d && !s)
-		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n > 0)
-	{
-		*d++ = *s++;
-		n--;
-	}
-	return (dest);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

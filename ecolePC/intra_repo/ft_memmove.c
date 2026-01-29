@@ -6,43 +6,32 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:38:51 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 18:39:00 by embostan         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:10:41 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 #include <stdio.h>
 
-void *memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	int	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	i = 0;
-
-	if (!d && !s)
-		return (NULL);
-	while (d[i] && s[i])
+	if (d < s)
 	{
-		if (d < s)
-		{
-			d[i] = s[i];
-			i++;
-		}
-		if (d > s)
-		{
-			i = n;
-			while (d[i] && s[i])
-			{
-				d[i - 1] = s[i - 1];
-				i--;
-			}
-			d[i] = '\0';
-		}
+		while (n--)
+			*d++ = *s++;
 	}
-	d[i] = '\0';
+	else
+	{
+		*d += n;
+		*s += n;
+		while (n--)
+			*--d = *--s;
+	}
 	return (dest);
 }
-

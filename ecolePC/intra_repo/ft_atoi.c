@@ -29,12 +29,12 @@ int	ft_atoi(const char *nptr)
 		i = i * 10 + (*nptr - 48);
 		nptr++;
 	}
-	return(i *= x);
+	return (i *= x);
 }
 
 int	main(int ac, char **av)
 {
 	if (ac >= 1 && ac <= 3)
 		printf("---> %d <---\n", ft_atoi(&av[1][0]));
-	return(0);
+	return (0);
 }

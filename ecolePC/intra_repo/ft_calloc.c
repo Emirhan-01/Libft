@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:37:48 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 14:15:46 by embostan         ###   ########.fr       */
+/*   Created: 2026/01/29 12:11:44 by embostan          #+#    #+#             */
+/*   Updated: 2026/01/29 14:48:10 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	void	*s;
 
-	if (!d && !s)
+	if (!nmemb && !size)
 		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n > 0)
-	{
-		*d++ = *s++;
-		n--;
-	}
-	return (dest);
+
+	s = malloc((nmemb * size));
+	ft_bzero(s, (nmemb * size));
+	return (s);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	void	*c = ft_calloc(5, 1);
+	printf("---> %s <---\n", (char *)c);
+	free(c);
+	return (0);
 }

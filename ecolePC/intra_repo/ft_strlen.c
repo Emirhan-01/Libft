@@ -6,18 +6,17 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:17:07 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 18:31:08 by embostan         ###   ########.fr       */
+/*   Updated: 2026/01/28 13:16:02 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
 		i++;
-
 	return (i);
 }

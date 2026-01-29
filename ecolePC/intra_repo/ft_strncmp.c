@@ -6,13 +6,14 @@
 /*   By: embostan <embostan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 18:15:37 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 17:16:56 by embostan         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:30:33 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

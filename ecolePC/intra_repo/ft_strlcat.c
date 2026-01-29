@@ -6,7 +6,7 @@
 /*   By: embostan <embostan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 15:54:38 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 18:51:06 by embostan         ###   ########.fr       */
+/*   Updated: 2026/01/29 12:14:20 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -36,8 +36,8 @@ size_t	ft_strlcat(char *dest, const char *src, unsigned int size)
 
 int	main(void)
 {
-	char *d = "Emirhan";
-	char *s = "Bostan";
+	char	*d = "Emirhan";
+	char	*s = "Bostan";
 
 	printf("---> %zu\n", ft_strlcat(d, s, 4));
 	return (0);
