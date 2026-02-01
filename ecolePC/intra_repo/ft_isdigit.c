@@ -6,10 +6,9 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:37:20 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 18:37:22 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:03 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_isalnum(char c)
 {
 	while (c != '\0')

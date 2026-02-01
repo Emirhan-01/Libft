@@ -6,10 +6,9 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:36:52 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 18:37:11 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:10:57 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_isascii(char c)
 {
 	while (c != '\0')

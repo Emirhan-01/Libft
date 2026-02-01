@@ -24,12 +24,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (s);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
-	void	*c = ft_calloc(5, 1);
-	printf("---> %s <---\n", (char *)c);
-	free(c);
+	void	*c = ft_calloc(2, 1);
+	printf("---> %s\n", (char *)c);
+	free (c);
 	return (0);
-}
+}*/

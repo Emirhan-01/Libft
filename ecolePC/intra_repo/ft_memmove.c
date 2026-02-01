@@ -6,11 +6,10 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:38:51 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 20:10:41 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:46 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
-#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

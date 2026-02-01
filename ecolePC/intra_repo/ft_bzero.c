@@ -22,3 +22,20 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
+
+/*#include <unistd.h>
+
+int	main(void)
+{
+	char	c[] = "3456789";
+	size_t	i = 5;
+	int	x = 0;
+
+	ft_bzero(c, i);
+	while (x <= 7)
+	{
+		write(1, &c[x], 1);
+		x++;
+	}
+	return (0);// a.out | cat -e ile çalıştır
+}*/

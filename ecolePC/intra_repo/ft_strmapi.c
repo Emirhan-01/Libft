@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 17:16:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:10:40 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/01 16:54:22 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/01 19:12:57 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalnum(char c)
+#include <stdlib.h>
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (c != '\0')
+	unsigned int	i;
+	char			*c;
+
+	if(!s || !f)
+		return (NULL);
+	while (s[i])
+		i++;
+	c = (char *)malloc(sizeof(char) * (i + 1));
+	if (!c)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if ((c >= 65 && c <= 90)
-			|| (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-			return (1);
+		c[i] = f(i, s[i]);
+		i++;
 	}
-	return (0);
+	c[i] = '\0';
+	return (c);
 }

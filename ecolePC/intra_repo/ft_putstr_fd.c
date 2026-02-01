@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 17:16:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:10:40 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/01 19:14:36 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/01 19:24:54 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalnum(char c)
+#include <unistd.h>
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	while (c != '\0')
+	if (!s)
+		return ;
+	while (*s)
 	{
-		if ((c >= 65 && c <= 90)
-			|| (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-			return (1);
+		write (fd, s, 1);
+		s++;
 	}
-	return (0);
 }

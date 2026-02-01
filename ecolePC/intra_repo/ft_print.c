@@ -6,10 +6,9 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:40:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 13:16:35 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:12:10 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_isprint(char c)
 {
 	while (c != '\0')

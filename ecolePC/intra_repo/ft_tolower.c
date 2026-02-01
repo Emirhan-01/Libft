@@ -6,10 +6,9 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:41:40 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 20:13:41 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:14:09 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 17:16:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:10:40 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/01 18:56:32 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/01 19:12:27 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalnum(char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	while (c != '\0')
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		if ((c >= 65 && c <= 90)
-			|| (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-			return (1);
+		f(i, &s[i]);
+		i++;
 	}
-	return (0);
 }

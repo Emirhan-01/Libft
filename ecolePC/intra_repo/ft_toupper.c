@@ -6,10 +6,9 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:25:41 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 13:41:00 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:14:15 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
