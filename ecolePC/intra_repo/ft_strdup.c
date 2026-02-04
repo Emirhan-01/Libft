@@ -18,9 +18,19 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	i = ft_strlen(s);
-	c = malloc(i + 1);
+	c = (char *)malloc(i + 1);
 	if (!c)
 		return (NULL);
 	ft_memcpy(c, s, i + 1);
 	return (c);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s[] = "Emirhan";
+
+	printf("---> %p\n\n", &s[0]);
+	printf("---> %p\n", ft_strdup(s));
 }
