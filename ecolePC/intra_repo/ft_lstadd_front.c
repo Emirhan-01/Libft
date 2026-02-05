@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:37:48 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 14:15:46 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/05 19:03:50 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/05 19:52:18 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-
-	if (!dest && !src)
-		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n > 0)
+	if (lst && new)
 	{
-		*d++ = *s++;
-		n--;
+		new->next = *lst;
+		*lst = new;
 	}
-	return (dest);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	d[] = "emirhan";
-	char	s[20] = "bostan";
+	t_list	*master = NULL;
+	t_list	*slave1;
+	t_list	*slave2;
 
-	ft_memcpy(d, s, 3);
-	printf("---> %s\n", d);
+	slave1 = ft_lstnew("Merhaba");
+	ft_lstadd_front(&master, slave1);
+
+	slave2 = ft_lstnew("Dunya");
+	ft_lstadd_front(&master, slave2);
+
+	t_list	*temp = master;
+	while (temp != NULL)
+	{
+		printf("Düriyenin güğümleri ---> %s\n", (char *)temp->content);
+		temp = temp->next;
+	}
 	return (0);
-}*/
+}

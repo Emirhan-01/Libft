@@ -6,13 +6,19 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:13:04 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:36:49 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/05 18:31:52 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stddef.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(char c);

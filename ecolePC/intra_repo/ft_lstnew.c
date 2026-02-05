@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:37:48 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 14:15:46 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/05 17:12:09 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/05 19:35:03 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	t_list	*new_node;
 
-	if (!dest && !src)
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n > 0)
-	{
-		*d++ = *s++;
-		n--;
-	}
-	return (dest);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	char	d[] = "emirhan";
-	char	s[20] = "bostan";
+	char	c[] = "Ali\nVeli\n49\n50\n";
+	t_list	*node;
 
-	ft_memcpy(d, s, 3);
-	printf("---> %s\n", d);
+	node = ft_lstnew(c);
+	if (!node)
+		return (1);
+	printf("%s", (char *)node->content);
+	free(node);
 	return (0);
 }*/

@@ -20,17 +20,29 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	x = 0;
 	if (little[i] == '\0')
-		return (char *)big;
-	while (big[i] != '\0' || !(i < len))
+		return ((char *)big);
+	while (big[i] || (i < len))
 	{
-		while (big[i + x] == little[x])
+		while (big[i + x] && little[x]
+			&& (big[i + x] == little[x]) && (i + x) < len)
 		{
 			x++;
 			if (little[x] == '\0')
-				return (char *)big;
+				return ((char *)(big + i));
 		}
 		x = 0;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	big[] = "Emirhan Bostan";
+	char	little[] = "n Boscan";
+
+	printf("---> %s\n", ft_strnstr(big, little ,14));
+	return (0);
+}*/

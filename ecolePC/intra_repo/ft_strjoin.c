@@ -29,8 +29,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	add = c;
 	while (*s1)
 		*add++ = *s1++;
-	while (s2)
+	while (*s2)
 		*add++ = *s2++;
 	*add = '\0';
 	return (c);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[] = "Emirhan ";
+	char	s2[] = "Bostan";
+
+	printf("---> %s\n", ft_strjoin(s1, s2));
+	return (0);
+}*/

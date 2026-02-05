@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 
 	num = n;
 	len = count(num);
-	c = (char *)malloc(sizeof(char) * (len + 1));
+	c = malloc(len + 1);
 	if (!c)
 		return (NULL);
 	c[len] = '\0';
