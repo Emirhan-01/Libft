@@ -6,7 +6,7 @@
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:13:04 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/05 18:31:52 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/09 22:34:14 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -30,6 +30,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_lstsize(t_list *lst);
 
 char	*ft_itoa(int i);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -53,9 +54,14 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 size_t	ft_strlcat(char *dest, const char *src, unsigned int size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
 
 #endif

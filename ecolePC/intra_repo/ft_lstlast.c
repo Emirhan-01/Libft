@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/01 19:00:49 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:25:17 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/09 18:37:42 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/09 22:26:56 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!c)
-		return ;
-	write (fd, &c, 1);
+	while (!(lst->next == NULL))
+		lst = lst->next;
+	return(lst);
 }
 /*
-#include <fcntl.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	int	a;
+	t_list	*frst;
+	t_list	*a;
+	t_list	*b;
+	char	*x = "Emirhan";
+	char	*y = " ";
+	char	*z = "Bostan";
 
-	a = open("deneme.txt", O_RDWR | O_CREAT, 0777);
-	ft_putchar_fd('X', a);
-	close(a);
+	frst = ft_lstnew(x);
+	a = ft_lstnew(y);
+	b = ft_lstnew(z);
+	
+	frst->next = a;
+	a->next = b;
+
+	printf("--->%s<---\n", (char *)ft_lstlast(frst)->content);	
+	return (0);
 }*/

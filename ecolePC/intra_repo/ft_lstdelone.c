@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/01 19:00:49 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:25:17 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/09 22:47:23 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/09 23:21:38 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_del(void *content)
 {
-	if (!c)
-		return ;
-	write (fd, &c, 1);
+		free(content);
 }
-/*
-#include <fcntl.h>
 
-int	main(void)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int	a;
+	ft_del(lst->next);
+	free(lst);
+}
 
-	a = open("deneme.txt", O_RDWR | O_CREAT, 0777);
-	ft_putchar_fd('X', a);
-	close(a);
-}*/
