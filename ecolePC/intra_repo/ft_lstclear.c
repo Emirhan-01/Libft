@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 22:47:23 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/10 14:14:16 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/10 13:36:59 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/10 15:51:03 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdalign.h>
 #include "libft.h"
 
 void	ft_del(void *content)
 {
 		free(content);
 }
-
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void    ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	ft_del(lst->next);
-	free(lst);
+    t_list *box;
+
+    while ((*lst) != NULL)
+    {
+        ft_del((*lst)->content);
+        box = (*lst)->next;
+        free(*lst);
+        *lst = box;
+    }
+    *lst = NULL;//lst nin içinde içi boş olan bir adres kalır ve biz bu işlemle lst deki boş adresi sileriz
 }
 
+int main(void)
+{
+    
+}
