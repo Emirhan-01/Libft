@@ -6,10 +6,11 @@
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:13:04 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/10 13:49:18 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/11 19:04:31 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stddef.h>
@@ -56,6 +57,8 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	my_del(void *content);
+void    ft_lstclear(t_list **lst, void (*del)(void*));
 
 size_t	ft_strlcat(char *dest, const char *src, unsigned int size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);

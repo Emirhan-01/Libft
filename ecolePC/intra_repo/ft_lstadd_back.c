@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 18:55:16 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/09 22:37:14 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/11 17:42:51 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -25,15 +26,16 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
+/*
 #include <stdio.h>
 
 int	main(void)
 {
 	t_list	*start = NULL;
 
-	char	*a = "Merhaba";
-	char	*b = "Dünya";
-	char	*c = "!!!";
+	char	*a = ft_strdup("Merhaba");
+	char	*b = ft_strdup("Dünya");
+	char	*c = ft_strdup("!!!");
 
 	ft_lstadd_back(&start, ft_lstnew(a));
 	ft_lstadd_back(&start, ft_lstnew(b));
@@ -49,3 +51,4 @@ int	main(void)
 	printf("\n");
 	return (0);
 }
+*/

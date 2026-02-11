@@ -6,32 +6,53 @@
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 13:36:59 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/10 15:51:03 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/11 17:41:40 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdalign.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_del(void *content)
-{
-		free(content);
-}
 void    ft_lstclear(t_list **lst, void (*del)(void*))
 {
     t_list *box;
 
     while ((*lst) != NULL)
     {
-        ft_del((*lst)->content);
+        del((*lst)->content);
         box = (*lst)->next;
         free(*lst);
         *lst = box;
     }
-    *lst = NULL;//lst nin içinde içi boş olan bir adres kalır ve biz bu işlemle lst deki boş adresi sileriz
+    *lst = NULL;//lst nin içinde içi boş olan bir adres kalır ve biz bu işlemle lst deki boş adrese giden yolu kapatıyoruz
 }
+#include <stdio.h>
 
 int main(void)
 {
+    char    *a = ft_strdup("Emirhan"); 
+    char    *b = ft_strdup("Bostan'dan");
+    char    *c = ft_strdup("Dünyaya");
+    char    *d = ft_strdup("Selamlar");
+
+    t_list  *master = NULL;
+    ft_lstadd_back(&master, ft_lstnew(a));
+    ft_lstadd_back(&master, ft_lstnew(b));
+    ft_lstadd_back(&master, ft_lstnew(c));
+    ft_lstadd_back(&master, ft_lstnew(d));
+
+	t_list	*tmp = master;
+
+	while(tmp)
+	{
+		printf("%s ", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	printf("\n");
+
+    ft_lstclear(&master, my_del);
     
+    if (master == NULL)
+        printf("Liste başarıyla temizlendi.\n");
+    return (0);
 }

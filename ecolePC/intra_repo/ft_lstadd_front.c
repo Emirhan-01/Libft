@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 19:03:50 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/05 19:52:18 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/11 17:44:34 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
@@ -26,9 +27,9 @@ int	main(void)
 {
 	t_list	*start = NULL;
 
-	char	*a = "Merhaba";
-	char	*b = "Dünya";
-	char	*c = "!!!";
+	char	*a = ft_strdup("Merhaba");
+	char	*b = ft_strdup("Dünya");
+	char	*c = ft_strdup("!!!");
 
 	ft_lstadd_front(&start, ft_lstnew(c));
 	ft_lstadd_front(&start, ft_lstnew(b));

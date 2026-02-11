@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emirhan <emirhan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:47:06 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/10 12:29:10 by emirhan          ###   ########.fr       */
+/*   Updated: 2026/02/10 18:34:57 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
+/*
 int	main(void)
 {
 	t_list	*frst;
@@ -45,3 +45,4 @@ int	main(void)
 	printf("---> %d <---\n", ft_lstsize(frst));	
 	return (0);
 }
+*/
