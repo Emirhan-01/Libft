@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:59:15 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/27 19:04:27 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:09:39 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -31,10 +30,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (i *= x);
 }
-
+/*
 int	main(int ac, char **av)
 {
 	if (ac >= 1 && ac <= 3)
 		printf("---> %d <---\n", ft_atoi(&av[1][0]));
 	return (0);
 }
+*/

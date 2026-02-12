@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 19:00:49 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:25:17 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:12:23 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)

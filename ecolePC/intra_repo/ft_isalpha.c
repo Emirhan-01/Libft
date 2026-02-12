@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 17:21:35 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 19:53:31 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:10:18 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_isalpha(char c)
 {
@@ -21,9 +20,10 @@ int	ft_isalpha(char c)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	printf("---> %d <---\n", ft_isalpha('x'));
 	return (0);
 }
+*/

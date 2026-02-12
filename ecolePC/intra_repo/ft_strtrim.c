@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 18:48:36 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/29 21:27:52 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:19:19 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
-#include <unistd.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -32,6 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (res);
 }
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -46,3 +46,4 @@ int	main(void)
 	free(islem);
 	return (0);
 }
+*/

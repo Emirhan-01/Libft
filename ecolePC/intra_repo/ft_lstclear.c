@@ -6,14 +6,14 @@
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 13:36:59 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/11 17:41:40 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:27:20 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-void    ft_lstclear(t_list **lst, void (*del)(void*))
+void    ft_lstclear(t_list **lst, void (*del)(void *))
 {
     t_list *box;
 
@@ -26,6 +26,7 @@ void    ft_lstclear(t_list **lst, void (*del)(void*))
     }
     *lst = NULL;//lst nin içinde içi boş olan bir adres kalır ve biz bu işlemle lst deki boş adrese giden yolu kapatıyoruz
 }
+/*
 #include <stdio.h>
 
 int main(void)
@@ -56,3 +57,4 @@ int main(void)
         printf("Liste başarıyla temizlendi.\n");
     return (0);
 }
+*/

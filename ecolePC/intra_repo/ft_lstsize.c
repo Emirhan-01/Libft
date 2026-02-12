@@ -6,12 +6,11 @@
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:47:06 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/10 18:34:57 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:44:08 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_lstsize(t_list *lst)
 {

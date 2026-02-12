@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:15:37 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/29 14:59:33 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:10:01 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

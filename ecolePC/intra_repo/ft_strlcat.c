@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 15:54:38 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/29 12:14:20 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:45:58 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
 
-#include <stdio.h>
-
-size_t	ft_strlcat(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dlen;
 	size_t	slen;
@@ -33,7 +31,7 @@ size_t	ft_strlcat(char *dest, const char *src, unsigned int size)
 	dest[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
+/*
 int	main(void)
 {
 	char	*d = "Emirhan";
@@ -42,3 +40,4 @@ int	main(void)
 	printf("---> %zu\n", ft_strlcat(d, s, 4));
 	return (0);
 }
+*/

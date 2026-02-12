@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 19:00:20 by embostan          #+#    #+#             */
-/*   Updated: 2026/01/28 19:31:31 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:44:16 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

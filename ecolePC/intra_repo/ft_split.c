@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:39:24 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 15:25:14 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:29:23 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -45,10 +46,7 @@ char	**ft_split(char const *s, char c)
 	size_t	st;
 	char	**result;
 
-	if (!s)
-		return (NULL);
-	result = malloc(word_counter(s, c) + 1);
-	if (!result)
+	if (!s || !(result = malloc(sizeof(char *) * word_counter(s, c) + 1)))
 		return (NULL);
 	i = 0;
 	while (*s)
@@ -74,7 +72,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	s[] = "    lift   bit     artık  yeter   ";
+	char	s[] = " lift   bit     artık  yeter   ";
 	char	c = ' ';
 	char	**result;
 	int		i;

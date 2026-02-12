@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:37:20 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:11:03 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:10:36 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalnum(char c)
+
+int	ft_isdigit(char c)
 {
 	while (c != '\0')
 	{

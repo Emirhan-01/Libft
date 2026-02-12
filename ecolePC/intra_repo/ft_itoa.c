@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 15:08:48 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 16:54:54 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:14:47 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 #include <stdlib.h>
 
 static int	count(long n)
@@ -47,12 +49,12 @@ char	*ft_itoa(int n)
 	}
 	while (num > 0)
 	{
-		c[--len] = (num % 10) + 48;//son basamaktan başlayarak işlem yapılır
-		num /= 10;//işlem yapılan sondaki basamak çöpe atılır
+		c[--len] = (num % 10) + 48;
+		num /= 10;
 	}
 	return (c);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -60,3 +62,4 @@ int	main(void)
 	printf("---> %s\n",ft_itoa(-3456));
 	return (0);
 }
+*/

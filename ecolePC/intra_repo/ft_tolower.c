@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:41:40 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:14:09 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:19:35 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

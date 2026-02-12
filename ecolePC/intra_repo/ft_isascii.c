@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:36:52 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/01 19:10:57 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:10:31 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_isascii(char c)
 {
 	while (c != '\0')
 	{
-		if ((c >= 0 && c <= 127))
+		if ((c >= 0) && (c < 127))
 			return (1);
 	}
 	return (0);
