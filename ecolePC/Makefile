@@ -21,18 +21,14 @@ SRC         = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 
 OBJS        = $(SRC:.c=.o)
 
-# Varsayılan Hedef
 all: $(NAME)
 
-# Kütüphane Oluşturma
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-# .c -> .o Derleme Kuralı
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Temizlik Kuralları
 clean:
 	$(RM) $(OBJS)
 
@@ -41,5 +37,4 @@ fclean: clean
 
 re: fclean all
 
-# Phony (Dosya isimleriyle çakışmayı önler)
 .PHONY: all clean fclean re
