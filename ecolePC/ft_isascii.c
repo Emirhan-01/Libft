@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:37:20 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:10:36 by embostan         ###   ########.fr       */
+/*   Created: 2026/01/27 18:36:52 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/13 17:04:30 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isascii(char c)
 {
 	while (c != '\0')
 	{
-		if ((c >= 48 && c <= 57))
+		if ((c >= 0) && (c < 127))
 			return (1);
 	}
 	return (0);

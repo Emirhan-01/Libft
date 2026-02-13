@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 22:47:23 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:27:34 by embostan         ###   ########.fr       */
+/*   Created: 2026/01/27 18:37:20 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/13 17:04:34 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_isdigit(char c)
 {
-	del(lst->next);
-	free(lst);
+	while (c != '\0')
+	{
+		if ((c >= 48 && c <= 57))
+			return (1);
+	}
+	return (0);
 }
-

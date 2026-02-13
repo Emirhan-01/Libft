@@ -6,7 +6,7 @@
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:39:24 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:29:23 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:44:41 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ char	**ft_split(char const *s, char c)
 	size_t	st;
 	char	**result;
 
-	if (!s || !(result = malloc(sizeof(char *) * word_counter(s, c) + 1)))
+	result = malloc(sizeof(char *) * (word_counter(s, c) + 1));
+	if (!s || !result)
 		return (NULL);
 	i = 0;
 	while (*s)
@@ -67,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result[i] = NULL, result);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -87,4 +88,5 @@ int	main(void)
 		i++;
 	}
 	return (0);
-}	
+}
+*/	

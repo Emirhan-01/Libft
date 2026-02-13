@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 18:55:16 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/11 17:42:51 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/05 19:03:50 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/13 17:21:42 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*last;
-
-	if (!lst || !new)
-		return;
-	if(*lst == NULL)
+	if (lst && new)
 	{
+		new->next = *lst;
 		*lst = new;
-		return;
 	}
-	last = ft_lstlast(*lst);
-	last->next = new;
 }
 /*
 #include <stdio.h>
@@ -37,9 +31,9 @@ int	main(void)
 	char	*b = ft_strdup("Dünya");
 	char	*c = ft_strdup("!!!");
 
-	ft_lstadd_back(&start, ft_lstnew(a));
-	ft_lstadd_back(&start, ft_lstnew(b));
-	ft_lstadd_back(&start, ft_lstnew(c));
+	ft_lstadd_front(&start, ft_lstnew(c));
+	ft_lstadd_front(&start, ft_lstnew(b));
+	ft_lstadd_front(&start, ft_lstnew(a));
 
 	t_list	*tmp = start;
 
@@ -50,5 +44,4 @@ int	main(void)
 	}
 	printf("\n");
 	return (0);
-}
-*/
+}*/

@@ -1,47 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 19:03:50 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/11 17:44:34 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/09 18:37:42 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/13 17:16:11 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	while (!(lst->next == NULL))
+		lst = lst->next;
+	return (lst);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	t_list	*start = NULL;
+	t_list	*frst;
+	t_list	*a;
+	t_list	*b;
+	char	*x = "Emirhan";
+	char	*y = " ";
+	char	*z = "Bostan";
 
-	char	*a = ft_strdup("Merhaba");
-	char	*b = ft_strdup("Dünya");
-	char	*c = ft_strdup("!!!");
+	frst = ft_lstnew(x);
+	a = ft_lstnew(y);
+	b = ft_lstnew(z);
+	
+	frst->next = a;
+	a->next = b;
 
-	ft_lstadd_front(&start, ft_lstnew(c));
-	ft_lstadd_front(&start, ft_lstnew(b));
-	ft_lstadd_front(&start, ft_lstnew(a));
-
-	t_list	*tmp = start;
-
-	while(tmp)
-	{
-		printf("%s ", (char *)tmp->content);
-		tmp = tmp->next;
-	}
-	printf("\n");
+	printf("--->%s<---\n", (char *)ft_lstlast(frst)->content);	
 	return (0);
 }*/

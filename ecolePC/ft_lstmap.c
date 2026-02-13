@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 18:40:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:10:40 by embostan         ###   ########.fr       */
+/*   Created: 2026/02/11 18:07:29 by embostan          #+#    #+#             */
+/*   Updated: 2026/02/13 17:31:55 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *))
 {
-	while (c != '\0')
+	t_list	*list;
+	t_list	*node;
+	void	*cont;
+
+	if (!lst || !f || *del)
+		return (NULL);
+	node = NULL;
+	while (lst)
 	{
-		if ((c >= 32 && c <= 126))
-			return (1);
+		cont = f(lst->content);
+		node = ft_lstnew(cont);
+		if (!node)
+		{
+			del(cont);
+			ft_lstclear(&list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&list, node);
+		lst = lst->next;
 	}
-	return (0);
+	return (list);
 }

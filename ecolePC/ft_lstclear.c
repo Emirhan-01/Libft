@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 13:36:59 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:27:20 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:38:19 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void    ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *box;
+	t_list	*box;
 
-    while ((*lst) != NULL)
-    {
-        del((*lst)->content);
-        box = (*lst)->next;
-        free(*lst);
-        *lst = box;
-    }
-    *lst = NULL;//lst nin içinde içi boş olan bir adres kalır ve biz bu işlemle lst deki boş adrese giden yolu kapatıyoruz
+	while ((*lst) != NULL)
+	{
+		del((*lst)->content);
+		box = (*lst)->next;
+		free(*lst);
+		*lst = box;
+	}
+	*lst = NULL;
 }
 /*
 #include <stdio.h>
