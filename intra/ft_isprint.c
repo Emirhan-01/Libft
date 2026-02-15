@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:40:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 17:04:37 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:24:54 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	while (c != '\0')
 	{

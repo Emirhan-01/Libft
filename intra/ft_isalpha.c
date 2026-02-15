@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 17:21:35 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:10:18 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:24:42 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	while (c != '\0')
 	{

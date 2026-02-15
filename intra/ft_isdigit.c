@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:37:20 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 17:04:34 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:24:49 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	while (c != '\0')
 	{

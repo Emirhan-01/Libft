@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:16:03 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 17:03:31 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:24:45 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	while (c != '\0')
 	{

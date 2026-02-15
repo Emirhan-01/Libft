@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:36:52 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 17:04:30 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:24:22 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	while (c != '\0')
 	{
