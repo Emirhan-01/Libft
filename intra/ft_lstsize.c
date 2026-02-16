@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:47:06 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/12 23:44:08 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 14:07:55 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:56:32 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:15:17 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 14:09:28 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

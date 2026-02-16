@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 19:03:50 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 17:21:42 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:01:11 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:41:40 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/13 00:19:35 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 14:10:47 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

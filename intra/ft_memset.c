@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:39:25 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/12 23:44:54 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:01:23 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

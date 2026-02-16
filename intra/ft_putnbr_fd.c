@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42kocaeli>      +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 19:32:37 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/12 23:45:10 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 14:09:01 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
