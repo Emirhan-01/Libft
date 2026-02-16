@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: embostan <embostan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 18:59:15 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/15 16:53:09 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/16 12:50:06 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_atoi(const char *nptr)
 
 	i = 0;
 	x = 1;
-	if (*nptr == ' ')
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
@@ -25,10 +25,10 @@ int	ft_atoi(const char *nptr)
 			x *= -1;
 		nptr++;
 	}
-	while ((*nptr >= 48) && (*nptr <= 57))
+	while (*nptr >= 48 && *nptr <= 57)
 	{
-		i = i * 10 + (*nptr - 48);
+		i = (i * 10) + (*nptr - 48);
 		nptr++;
 	}
-	return (i *= x);
+	return (i * x);
 }
