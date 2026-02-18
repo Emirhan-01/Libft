@@ -6,7 +6,7 @@
 /*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:44:40 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/16 14:09:21 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:35:50 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if ((char)c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: embostan <embostan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 12:11:44 by embostan          #+#    #+#             */
-/*   Updated: 2026/02/16 14:06:04 by embostan         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:06:44 by embostan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*s;
 
-	if (nmemb == 0 && size == 0)
-		return (malloc(1));
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 	s = malloc(nmemb * size);
 	if (!s)
 		return (NULL);
