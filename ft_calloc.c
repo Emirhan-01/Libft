@@ -12,13 +12,14 @@
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*s;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
+	if (nmemb == 0 || size == 0 || (nmemb > SIZE_MAX / size))
+		return (malloc(1));
 	s = malloc(nmemb * size);
 	if (!s)
 		return (NULL);
